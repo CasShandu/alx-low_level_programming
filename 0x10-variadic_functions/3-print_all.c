@@ -4,46 +4,44 @@
  * print_all - prints anything
  * @format: list of types of arguments passed to the function
  */
-
 void print_all(const char * const format, ...)
 {
-	int i = 0;
-	char *str, *sep = "";
+	int i;
+	char *sep = "";
+	va_list spc;
+	char *str;
 
-	va_list list;
+	va_start(spc, format);
 
-	va_start(list, format);
-
-	if (format)
+	i = 0;
+	while (format != NULL && format[i] != '\0')
 	{
-		while (format[i])
+		switch (format[i])
 		{
-			switch (format[i])
-			{
-				case 'c':
-					printf("%s%c", sep, va_arg(list, int));
-					break;
-				case 'i':
-					printf("%s%d", sep, va_arg(list, int));
-					break;
-				case 'f':
-					printf("%s%f", sep, va_arg(list, double));
-					break;
-				case 's':
-					str = va_arg(list, char *);
-					if (!str)
-						str = "(nil)";
-					printf("%s%s\n", sep, str);
-					break;
-				default:
-					i++;
-					continue;
-			}
-
-			sep = ", ";
-			i++;
+			case 'i':
+				printf("%s%d", sep, va_arg(spc, int));
+				break;
+			case 'f':
+				printf("%s%f", sep, va_arg(spc, double));
+				break;
+			case 'c':
+				printf("%s%c", sep, va_arg(spc, int));
+				break;
+			case 's':
+				str = va_arg(spc, char *);
+				if (str == NULL)
+					str = "(nil)";
+				printf("%s%s", sep, str);
+				break;
+			default:
+				break;
 		}
 
-	}
+		sep = ", ";
 
+		i++;
+	}
+	printf("\n");
+	va_end(spc);
 }
+
