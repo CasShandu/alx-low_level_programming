@@ -12,10 +12,10 @@
  * pointer to the next node of a list
  */
 
-typedef struct listint_s
+typedef struct listint_t
 {
 	int n;
-	struct listint_s *next;
+	struct listint_t *next;
 
 } listint_t;
 
