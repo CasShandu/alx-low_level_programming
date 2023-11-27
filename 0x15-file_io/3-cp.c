@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
 }
 
 /**
- * che_to_stat - checks if file can be opened or closed
+ * check_IO_stat - checks if file can be opened or closed
  * @stat: description of file to be opened
  * @filename: filename g
  * @mode: closing file or opening
