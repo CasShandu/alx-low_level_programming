@@ -42,12 +42,12 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 			}
 
 			free(h1);
-			return (4);
+			return (1);
 		}
 		h2 = h1;
 		h1 = h1->next;
 		i++;
 	}
 
-	return (-4);
+	return (-1);
 }
