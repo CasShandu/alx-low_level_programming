@@ -3,6 +3,7 @@
 
 def island_perimeter(grid):
     """Return the perimiter of an island.
+
     Args:
         grid (list): A list of integers representing an island.
     Returns:
