@@ -1,8 +1,9 @@
 #include "m.h"
 
 /**
- * main. - Entry point
+ * main - Entry point
  *
+ * Return: Always 
  */
 int main(void)
 {
