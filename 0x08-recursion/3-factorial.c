@@ -16,3 +16,9 @@ int factorial(int n)
 	return (n * factorial(n - 1));
 
 }
+
+/* THE CALCULATION FOR THE EQUATION OF (n * factorial(n - 1)); IS AS FOLLOWS: [1 X FACTORIAL (1 - 1)! = 1]
+ 									      [5 X FACTORIAL (5 - 1)! = 120]
+									      [10 X FACTORIAL (10 - 1)! = 3628800] */
+
+
